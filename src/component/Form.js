@@ -25,7 +25,16 @@ const  Form =()=>{
 
         }),
         onSubmit:(values)=>{ 
-            console.log(values) }
+            const username=values.username
+            const name=values.name
+            const email=values.email
+            const method=values.method
+            const color=values.color
+            fetch('http://localhost:8000/data',{
+                method: 'POST',
+                headers: { 'Content-type': 'application/json' },
+                body: JSON.stringify({username,name,email,method,color})
+              }) }
     })
    
     console.log(formik.errors)

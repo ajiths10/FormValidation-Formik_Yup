@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "username": "dfsf",
+      "name": "Ajith",
+      "email": "test@email.com",
+      "method": "Bitcoin",
+      "color": "blue",
+      "id": 1
+    },
+    {
+      "username": "testuser10",
+      "name": "test",
+      "email": "testuser@email.com",
+      "method": "Gold",
+      "color": "blue",
+      "id": 2
+    }
+  ]
+}
