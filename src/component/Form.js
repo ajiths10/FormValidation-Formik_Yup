@@ -30,18 +30,20 @@ const  Form =()=>{
             const email=values.email
             const method=values.method
             const color=values.color
-            fetch('http://localhost:8000/data',{
-                method: 'POST',
-                headers: { 'Content-type': 'application/json' },
-                body: JSON.stringify({username,name,email,method,color})
-              }) }
+            console.log(values);
+            // fetch('http://localhost:8000/data',{
+            //     method: 'POST',
+            //     headers: { 'Content-type': 'application/json' },
+            //     body: JSON.stringify({username,name,email,method,color})
+            //   }) 
+        }
     })
    
-    console.log(formik.errors)
-    console.log(formik.touched)
+    //console.log(formik.errors)
+    //console.log(formik.touched)
     
     return <div>
-        <form onSubmit={formik.handleSubmit}>
+        
             <input 
             type="text"
             name="username"
@@ -95,8 +97,8 @@ const  Form =()=>{
                 <option value='Gold'>Gold</option>
             </select>
             {formik.touched.method && formik.errors.method && <p style={{color:"red"}}> {formik.errors.method }</p>}
-            <button type="submit">Submit</button>
-        </form>
+            <button type="submit" onClick={formik.handleSubmit}>Submit</button>
+        
     </div>
 };
 
